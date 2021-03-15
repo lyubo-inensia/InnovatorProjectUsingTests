@@ -39,6 +39,9 @@
     <None Update="app.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="settings.example.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
