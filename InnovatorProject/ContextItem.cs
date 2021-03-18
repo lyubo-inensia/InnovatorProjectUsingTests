@@ -2,16 +2,16 @@
 
 namespace Inensia.InnovatorProject
 {
-    public abstract class ServerMethod : Item
+    public abstract class ContextItem : Item
     {
         Aras.Server.Core.CallContext CCO;
         Aras.Server.Core.IContextState RequestState;
-        public ServerMethod(IServerConnection conn) : base(conn)
+        public ContextItem(IServerConnection conn) : base(conn)
         {
             SetContext(conn);
         }
 
-        public ServerMethod(Item item) : base(item.getInnovator().getConnection())
+        public ContextItem(Item item) : base(item.getInnovator().getConnection())
         {
             SetContext(item.getInnovator().getConnection());
             this.dom = item.dom;

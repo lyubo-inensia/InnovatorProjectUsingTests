@@ -5,6 +5,7 @@
 
 # Exclude settings files
 settings.json
+_ArasBin/
 
 # User-specific files
 *.rsuser

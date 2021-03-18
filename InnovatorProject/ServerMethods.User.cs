@@ -2,12 +2,9 @@
 
 namespace Inensia.InnovatorProject
 {
-    public class ItemTypeMethods : ServerMethod
+    public partial class ServerMethods : ContextItem
     {
-        public ItemTypeMethods(Item item) : base(item)
-        {
-        }
-
+        // Sets the fax property of a user
         public Item set_user_fax()
         {
             Innovator inn = this.getInnovator();
@@ -15,6 +12,7 @@ namespace Inensia.InnovatorProject
             string user_id = this.getProperty("user_id", "");
             Item user = inn.newItem("User", "edit");
             user.setID(user_id);
+            user.setProperty("fax", fax);
             user = user.apply();
 
             if (user.isError())
@@ -26,7 +24,7 @@ namespace Inensia.InnovatorProject
             Item res = user.apply();
             if (res.isError())
             {
-                return this.getInnovator().newError(res.getErrorDetail());
+                return inn.newError(res.getErrorDetail());
             }
 
             return user;
