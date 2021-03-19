@@ -8,11 +8,12 @@ namespace Inensia.InnovatorProject
         public Item set_user_fax()
         {
             Innovator inn = this.getInnovator();
+
             string fax = this.getProperty("fax", "");
             string user_id = this.getProperty("user_id", "");
+
             Item user = inn.newItem("User", "edit");
             user.setID(user_id);
-            user.setProperty("fax", fax);
             user = user.apply();
 
             if (user.isError())
@@ -22,6 +23,7 @@ namespace Inensia.InnovatorProject
 
             user.setProperty("fax", fax);
             Item res = user.apply();
+
             if (res.isError())
             {
                 return inn.newError(res.getErrorDetail());
