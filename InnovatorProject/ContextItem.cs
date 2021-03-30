@@ -4,8 +4,8 @@ namespace Inensia.InnovatorProject
 {
     public abstract class ContextItem : Item
     {
-        Aras.Server.Core.CallContext CCO;
-        Aras.Server.Core.IContextState RequestState;
+        //Aras.Server.Core.CallContext CCO;
+        //Aras.Server.Core.IContextState RequestState;
         public ContextItem(IServerConnection conn) : base(conn)
         {
             SetContext(conn);
@@ -22,7 +22,7 @@ namespace Inensia.InnovatorProject
         {
             // TODO: find how to populate this
             //CCO = ((Aras.Server.Core.IOMConnection)conn).CCO;
-           RequestState = CCO?.RequestState;
+           //RequestState = CCO?.RequestState;
         }
     }
 }

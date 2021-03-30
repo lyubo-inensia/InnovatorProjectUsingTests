@@ -8,5 +8,11 @@ namespace Inensia.InnovatorProject
         {
         }
 
+        public Item MRN_PLM_DialogChange()
+        {
+
+
+            return this;
+        }
     }
 }

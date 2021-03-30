@@ -1,14 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net452</TargetFramework>
     <RootNamespace>Inensia.InnovatorProject</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Aras.Server.Core">
-      <HintPath>..\ArasBin\bin\Aras.Server.Core.dll</HintPath>
-    </Reference>
     <Reference Include="IOM">
       <HintPath>..\ArasBin\bin\IOM.dll</HintPath>
     </Reference>
