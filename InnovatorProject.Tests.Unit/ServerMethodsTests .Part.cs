@@ -15,7 +15,7 @@ namespace InnovatorProject.Tests.Unit
             Item context = Inn.newItem("Part", "add");
             context.setProperty("item_number", partName);
             context = context.apply();
-            var item = new Inensia.InnovatorProject.ServerMethods(context);
+            var item = new ServerMethods(context);
             Item doc = Inn.newItem("Document", "get");
             doc.setProperty("item_number", partName);
 
