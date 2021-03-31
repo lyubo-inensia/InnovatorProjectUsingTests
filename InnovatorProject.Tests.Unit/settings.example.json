@@ -1,6 +1,6 @@
 ﻿{
-  "Url": "http://sae-integ1.westeurope.cloudapp.azure.com/mersendevelopment3",
-  "Db": "R12_Test_import",
+  "Url": "http://localhost/inntest",
+  "Db": "inntest",
   "User": "admin",
   "Pass": "innovator"
 }
