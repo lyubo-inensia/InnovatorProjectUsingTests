@@ -86,4 +86,4 @@ public void create_document_on_save()
 }
 ```
 #### Open Test Explorer in Visual Studio, select your test method from the tests tree, right click and choose Debug.
-## Notice! If you try to read Innovator instance local files, the operation will fail, because these files are not available on your machine.
+## Notice! If you try to read Innovator instance local files, the operation will fail, because these files are not available on your machine. Of course local files could be created and used for testing.
