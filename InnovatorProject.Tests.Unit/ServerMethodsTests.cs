@@ -12,7 +12,7 @@ namespace InnovatorProject.Tests.Unit
         {
             // Arrange
             var context = Inn.newItem("fake_type", "get");
-            var item = new Inensia.InnovatorProject.ServerMethods(context);
+            var item = new ServerMethods(context);
 
             // Act
             var res = item.MRN_PLM_DialogChange();
