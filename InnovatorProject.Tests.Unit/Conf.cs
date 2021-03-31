@@ -1,32 +1,13 @@
-﻿using Microsoft.Extensions.Configuration;
-using System;
+﻿using Newtonsoft.Json;
 using System.IO;
 
 namespace InnovatorProject.Tests.Unit
 {
     static class Conf
     {
-        public static AppSettings Load(string[] files = default)
+        public static AppSettings Load(string file = "settings.json")
         {
-            var builder = new ConfigurationBuilder();
-            if (files == default)
-            {
-                files = new string[] { "settings.json" };
-            }
-
-            foreach (string file in files)
-            {
-                if (!File.Exists(file))
-                {
-                    throw new Exception($"File {file} doesn't exist.");
-                }
-                builder.AddJsonFile(file, true, true);
-            }
-
-            builder.AddEnvironmentVariables();
-            var ret = builder.Build().GetSection("AppSettings").Get<AppSettings>();
-
-            return ret;
+            return JsonConvert.DeserializeObject<AppSettings>(File.ReadAllText(file));
         }
     }
 }
